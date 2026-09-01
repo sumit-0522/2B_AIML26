@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix subscription form</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+
+    body{
+        background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    form {
+        background: #fff;
+        width: 450px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color:rgb(159, 12, 12) ;
+    }
+
+    div {
+        margin-bottom: 18px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+        color: #444;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #bbb;
+        border-radius: 6px;
+        font-size: 15px;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #007BFF;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    /* Radio Buttons */
+    input[type="radio"] {
+        width: auto;
+        margin-right: 5px;
+    }
+
+    input[type="radio"] + label {
+        display: inline;
+        margin-right: 20px;
+        font-weight: normal;
+    }
+
+    /* Checkbox */
+    input[type="checkbox"] {
+        width: auto;
+        margin-right: 8px;
+    }
+
+    input[type="checkbox"] + label {
+        display: inline;
+        font-weight: normal;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #0056b3;
+    }
+
+    p {
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #444;
+    }
+</style>
+
+</head>
+
+<body>
+   
+    <form  onsubmit="return validate()">
+        <div>  
+            <h1>Netflix subscription form-2026</h1>
+                <img src="https://static.vecteezy.com/system/resources/previews/017/396/804/non_2x/netflix-mobile-application-logo-free-png.png" style=" border-radius: 50%; height: 80px; padding-left:70px ;" >
+            
+        </div>
+        <div>
+            <label for="Name">Name</label>
+            <input id="Name" type="text" placeholder="Enter your name" required>
+        </div>
+        <div>
+            <label for="tel">Mobile number</label>
+            <input id="Mobile number" type="tel" placeholder="Enter your mobile number">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="enter your email">
+        </div>
+        <div>
+            <label for="password"> Password</label>
+            <input id="password" type="password" placeholder="enter Password">
+        </div>
+        <div>
+            <label for="dob">date of birth</label>
+            <input id="dob" type="date" required="true">
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+        <option value=""disabled selected>select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+            </select>
+        </div>
+        <div>
+            <p>Subscription plan</p>
+            <input id="Basic" type="radio" name="subscription" value="Basic">
+            <label for="Basic" >Basic</label>
+            <input id="Premium" type="radio" name="subscription" value="Premium">
+            <label for="Premium">Premium</label>
+            <input id="VIP" type="radio" name="subscription" value="VIP">
+            <label for="VIP">VIP</label>
+        </div>
+        <div>
+            <input id="terms" type="checkbox" required>
+            <label for="terms">I agree to the terms and conditions</label>
+            
+        </div>
+        <div>
+            <label for="comments">comments</label>
+            <textarea id="comments" placeholder="Enter your commrnts" row="4"></textarea>
+        </div>
+        <div>
+            <button type="submit"> Submit</button>
+        </div>
+    </form>
+    <script>
+        function validate(){
+            let n=document.getElementById("Name").value 
+            let T=document.getElementById("Mobile number").value 
+            let E=document.getElementById("email").value
+           if (n == "") {
+    alert("Enter your name");
+    return false;
+}
+
+if (n.length < 3) {
+    alert("Name must contain at least 3 characters");
+    return false;
+}
+
+if (!/^[A-Za-z ]+$/.test(n)) {
+    alert("Name should contain only letters");
+    return false;
+}
+
+if (T == "" || !/^[0-9]{10}$/.test(T)) {
+    alert("Enter a valid 10-digit mobile number");
+    return false;
+}
+
+if (E == "") {
+    alert("Enter your email id");
+    return false;
+}
+
+if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(E)) {
+    alert("Enter a valid email address");
+    return false;
+}
+            
+
+        alert("Form submitted successfully!");
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
