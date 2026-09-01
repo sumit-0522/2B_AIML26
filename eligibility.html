@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: rgb(223, 20, 20);
+            background-color: black;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function sum(){
+            let age=parseInt(prompt("Enter your age:"))
+        if(age>=18){
+            
+            alert(" 😆 hip hip.. hurry, you are  eligible for voting")
+            let c=confirm("do you want to submityour response ")
+            if(c){
+        alert("your response is submitted")
+
+            }
+            else{
+                alert("Thank you!")
+            }
+        }
+        else(
+            
+            alert(" 😔 sorry,  you are not eligible for voting, try some years later",(age-18))
+        )
+        }
+    </script>
+</head>
+<body>
+    <h1> Voting Eligibility checker </h1>
+    <form action="/submit.php>
+
+    <div>
+    <label for="Name" >Name:</label>
+    <input id="Name" type="Name" placeholder="Enter your name" required> 
+    </div>
+    <div>
+    <lable for="email">Email:</lable>
+    <input id="emali" type="Email" placeholder="Enter email" required>
+    </div>
+    <div>
+    <button>submit</button>
+    </div>
+    <div>
+    <button onclick="sum()">click me</button>
+    </div>
+    
+    </form>
+</body>
+</html>
