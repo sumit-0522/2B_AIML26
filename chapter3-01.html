@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zomato Clone</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+}
+
+/* Header */
+
+header{
+    background:#e23744;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:35px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffe082;
+}
+
+/* Hero Section */
+
+.hero{
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
+    background-size:cover;
+    background-position:center;
+    height:500px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.hero button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:#e23744;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.hero button:hover{
+    background:#c71c2c;
+    transform:scale(1.05);
+}
+
+/* Gallery */
+
+.gallery{
+    width:90%;
+    margin:60px auto;
+}
+
+.gallery h2{
+    text-align:center;
+    color:#e23744;
+    margin-bottom:30px;
+    font-size:38px;
+}
+
+.images{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.images img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.images img:hover{
+    transform:scale(1.06);
+}
+
+/* About */
+
+.about{
+    width:85%;
+    margin:60px auto;
+    text-align:center;
+}
+
+.about h2{
+    color:#e23744;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+.about p{
+    line-height:1.8;
+    color:#444;
+    font-size:18px;
+}
+
+/* Footer */
+
+footer{
+    background:#222;
+    color:white;
+    padding:30px;
+    text-align:center;
+    margin-top:60px;
+}
+
+footer p{
+    line-height:1.8;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">Zomato</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+<a href="#">Location</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Discover the Best Food Near You</h1>
+
+<p>Order food from your favourite restaurants.</p>
+
+<button>Order Now</button>
+
+</section>
+
+<section class="gallery">
+
+<h2>Popular Dishes</h2>
+
+<div class="images">
+
+<img src="https://www.equentis.com/blog/wp-content/uploads/2024/06/Story-of-The-Zomato-Storytelling-00-01-1200x720.jpg">
+
+<img src="https://dmlib.airindia.com/adobe/assets/urn:aaid:aem:98574c34-0bf1-41f8-a452-f9c38bb4ea01/as/Zomato-Air-India.jpg">
+
+<img src="https://blinkx.in/stories/zomato-shares-reach-new-high-as-company-launches-group-ordering-feature/assets/2.jpeg">
+
+<img src="https://i.ndtvimg.com/i/2017-08/indian-food_650x400_81501923865.jpg">
+
+</div>
+
+</section>
+
+<section class="about">
+
+<h2>Why Choose Zomato?</h2>
+
+<p>
+Zomato connects millions of food lovers with the best restaurants around
+them. Whether you're craving pizza, burgers, biryani, desserts, or healthy
+food, Zomato delivers delicious meals right to your doorstep quickly and
+safely.
+</p>
+
+</section>
+
+<footer>
+
+<p>
+&copy 2026 Zomato Clone | Designed by Sumit ❤️
+</p>
+
+</footer>
+
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>Zomato</div>
+        <div>
+
+ <a href="/home">HOME</a>
+ <a href="/about">About</a>
+ <a href="/contect">contect</a>
+ <a href="Location">Location</a>
+        </div>
+    </header>
+    <main>
+        <div>
+            <img src="https://www.equentis.com/blog/wp-content/uploads/2024/06/Story-of-The-Zomato-Storytelling-00-01-1200x720.jpg">
+            <img src="https://dmlib.airindia.com/adobe/assets/urn:aaid:aem:98574c34-0bf1-41f8-a452-f9c38bb4ea01/as/Zomato-Air-India.jpg">
+            <img src="https://blinkx.in/stories/zomato-shares-reach-new-high-as-company-launches-group-ordering-feature/assets/2.jpeg">
+            <img src="https://i.ndtvimg.com/i/2017-08/indian-food_650x400_81501923865.jpg">
+        </div>
+ 
+    </main>
+    <footer>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quos sint, voluptas earum, animi corporis nemo ab alias suscipit quo eligendi maiores cupiditate velit quia error ea nesciunt, ratione expedita dignissimos repellat facere cumque eveniet assumenda. Repudiandae et maiores fuga, at impedit quidem, mollitia ea minima quisquam, quam debitis pariatur.
+
+        </div>
+    </footer>
+    
+</body>
+</html>    -->
